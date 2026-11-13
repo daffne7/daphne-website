@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課程報名｜Daphne Facebook 廣告實操課程</title>
+<meta name="description" content="填寫報名資料並透過 LINE 聯繫客服，報名 Daphne 的 Facebook 廣告實操課程。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="課程報名｜Daphne Facebook 廣告實操課程">
+<meta property="og:description" content="廣告會操作，更要懂得為什麼這樣投。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="炎科技數位行銷">
+<meta name="theme-color" content="#526771">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="index.html">DAPHNE.</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="開啟選單"><span></span><span></span></button>
+    <nav id="nav" aria-label="主要導覽">
+      <a href="index.html#about">關於 Daphne</a>
+      <a href="index.html#experience">專業經歷</a>
+      <a href="index.html#course">Facebook 廣告課程</a>
+      <a href="index.html#contact">聯絡合作</a>
+    </nav>
+    <div class="hsocial"><a data-link="line" aria-label="LINE 官方帳號"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5C6.5 2.5 2 6 2 10.4c0 3.9 3.5 7.2 8.2 7.8.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.8c0 .3-.2 1.1 1 .6 1.2-.5 6.4-3.8 8.7-6.5 1.3-1.4 1.3-2.6 1.3-3.7C22 6 17.5 2.5 12 2.5z"/><text x="12" y="12.3" font-size="5.4" font-weight="700" text-anchor="middle" fill="#343E43" font-family="Inter,Arial,sans-serif">LINE</text></svg></a>
+        <a data-link="facebook" aria-label="Facebook 粉絲專頁"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 1.2 19.9v-7h-2.3V12h2.3V10c0-2.3 1.4-3.5 3.4-3.5.7 0 1.4.1 1.4.1v2.2h-.8c-1.1 0-1.5.7-1.5 1.4V12h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 12 2z"/></svg></a></div>
+  </div>
+</header>
+
+<main id="main">
+<section class="reg">
+  <div class="wrap form-wrap">
+    <header class="head center reveal">
+      <p class="eyebrow">COURSE REGISTRATION</p>
+      <h1>Facebook 廣告實操課程報名</h1>
+      <p class="sub">填寫資料後，會自動帶入 LINE 訊息，只要按下傳送即可。</p>
+    </header>
+    <ol class="flow reveal">
+      <li><span class="num">01</span>填寫報名資料</li>
+      <li><span class="num">02</span>在 LINE 按下傳送</li>
+      <li><span class="num">03</span>客服小編提供付款連結</li>
+    </ol>
+    <form id="regForm" class="reg-card reveal" novalidate>
+      <div class="field"><label for="date">課程日期</label>
+        <select id="date" name="date" required></select><p class="err" id="err-date" role="alert"></p></div>
+      <div class="field"><label for="name">姓名</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="40" required><p class="err" id="err-name" role="alert"></p></div>
+      <div class="field"><label for="phone">電話</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="例：0912345678" maxlength="20" required><p class="err" id="err-phone" role="alert"></p></div>
+      <div class="field"><label for="lineId">LINE ID</label>
+        <input id="lineId" name="lineId" type="text" autocomplete="off" maxlength="40" required><p class="err" id="err-lineId" role="alert"></p></div>
+      <div class="field"><label for="title">現階段職務名稱</label>
+        <input id="title" name="title" type="text" autocomplete="organization-title" maxlength="60" required><p class="err" id="err-title" role="alert"></p></div>
+      <div class="field"><label for="industry">所在產業類別</label>
+        <select id="industry" name="industry" required>
+          <option value="">請選擇</option>
+          <option>製造業</option><option>批發零售／電商</option><option>餐飲服務</option><option>醫療美容／健康</option><option>金融保險</option><option>資訊科技／軟體</option><option>教育／培訓</option><option>不動產／營建</option><option>行銷廣告</option><option>公益／非營利</option><option value="其他">其他</option>
+        </select>
+        <input id="industryOther" type="text" maxlength="40" placeholder="請填寫產業類別" hidden>
+        <p class="err" id="err-industry" role="alert"></p></div>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="fine">送出即表示同意提供上述資料，作為課程報名聯繫使用。</p>
+      <button class="btn cta" type="submit" id="submitBtn">送出並前往 LINE</button>
+      <p class="note" id="formNote"></p>
+    </form>
+    <div class="reg-card done" id="done" hidden>
+      <h2>資料已送出</h2>
+      <p>請在 LINE 對話框按下「傳送」，客服小編會再提供付款連結。</p>
+      <a class="btn cta" id="lineBtn" target="_blank" rel="noopener noreferrer">開啟 LINE 對話</a>
+      <p class="fine">如果 LINE 沒有自動開啟，請複製下方內容，貼到官方帳號對話框後傳送。</p>
+      <textarea id="msgBox" rows="8" readonly></textarea>
+      <button class="btn ghost" type="button" id="copyBtn">複製報名內容</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><p class="logo">DAPHNE.</p><p class="muted">Marketing &amp; Business Consultant</p>
+      <p class="muted">炎科技數位行銷</p>
+      <div class="social">
+        <a data-link="line" aria-label="LINE 官方帳號"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5C6.5 2.5 2 6 2 10.4c0 3.9 3.5 7.2 8.2 7.8.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.8c0 .3-.2 1.1 1 .6 1.2-.5 6.4-3.8 8.7-6.5 1.3-1.4 1.3-2.6 1.3-3.7C22 6 17.5 2.5 12 2.5z"/><text x="12" y="12.3" font-size="5.4" font-weight="700" text-anchor="middle" fill="#343E43" font-family="Inter,Arial,sans-serif">LINE</text></svg><span>LINE 官方帳號</span></a>
+        <a data-link="facebook" aria-label="Facebook 粉絲專頁"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 1.2 19.9v-7h-2.3V12h2.3V10c0-2.3 1.4-3.5 3.4-3.5.7 0 1.4.1 1.4.1v2.2h-.8c-1.1 0-1.5.7-1.5 1.4V12h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 12 2z"/></svg><span>Facebook</span></a>
+      </div></div>
+    <nav aria-label="頁尾導覽">
+      <a href="index.html#about">關於 Daphne</a>
+      <a href="index.html#experience">專業經歷</a>
+      <a href="index.html#course">Facebook 廣告課程</a>
+      <a data-link="contact">聯絡合作</a>
+    </nav>
+  </div>
+  <p class="wrap copy">Copyright © 2026 Daphne｜炎科技數位行銷. All Rights Reserved.</p>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

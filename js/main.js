@@ -1,7 +1,7 @@
 // TODO: 後續補上正式連結（填入完整網址，例如 "https://..."；留空則按鈕維持停用狀態）
 const SITE_LINKS = {
   course: "",
-  registration: "",
+  registration: "signup.html", // 站內報名頁
   line: "https://line.me/R/ti/p/%40mskon", // LINE 官方帳號 @mskon
   facebook: "https://www.facebook.com/profile.php?id=61563323977308",
   instagram: "",
@@ -13,9 +13,8 @@ document.querySelectorAll("[data-link]").forEach(el => {
   const url = SITE_LINKS[el.dataset.link];
   if (url) {
     el.href = url;
-    el.target = "_blank";
-    document.querySelectorAll("[data-note]").forEach(n => (n.hidden = true));
-    el.rel = "noopener noreferrer";
+    if (/^https?:/.test(url)) { el.target = "_blank"; el.rel = "noopener noreferrer"; } // 站內頁面同分頁開啟
+    if (el.dataset.link === "registration") document.querySelectorAll("[data-note]").forEach(n => (n.hidden = true));
   } else {
     if (el.hasAttribute("data-keep")) { // 保留按鈕外觀，但不可點擊
       el.classList.add("is-pending");
