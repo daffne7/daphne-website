@@ -73,6 +73,17 @@ footer .logo{color:var(--white)}
 footer nav a{display:block;margin:0 0 6px;font-size:15px}
 footer a:hover{color:var(--white)}
 .muted{color:var(--mist);font-size:14px}
+.hsocial{display:flex;align-items:center;gap:6px;margin-left:auto;order:2}
+.hsocial a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;transition:background .25s}
+.hsocial a:hover{background:rgba(82,103,113,.12)}
+.hsocial svg{width:24px;height:24px;fill:var(--slate)}
+.hsocial text{fill:#fff}
+.menu-btn{order:3}
+@media(min-width:821px){.hsocial{margin-left:20px}}
+.social{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px}
+.social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;text-decoration:none;color:var(--stone)}
+.social svg{width:26px;height:26px;fill:var(--stone);flex:none}
+.social a:hover{color:var(--white)}.social a:hover svg{fill:var(--white)}
 .copy{margin-top:28px;font-size:13px;color:var(--mist);border-top:1px solid #4a565c;padding-top:18px}
 
 .num{font:600 15px Inter,sans-serif;color:var(--slate);letter-spacing:.08em}
