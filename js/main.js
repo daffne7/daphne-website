@@ -2,10 +2,10 @@
 const SITE_LINKS = {
   course: "",
   registration: "",
-  line: "",
-  facebook: "",
+  line: "https://line.me/R/ti/p/%40mskon", // LINE 官方帳號 @mskon
+  facebook: "https://www.facebook.com/profile.php?id=61563323977308",
   instagram: "",
-  contact: ""
+  contact: "https://line.me/R/ti/p/%40mskon" // 聯絡合作 → LINE 官方帳號
 };
 
 // 套用連結：有網址 → 啟用；無網址 → 停用且不跳轉
