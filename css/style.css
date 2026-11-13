@@ -1,0 +1,127 @@
+:root{--bg:#F3F4F1;--mist:#A6B8BF;--slate:#526771;--stone:#D9D5CD;--ink:#343E43;--white:#fff;--r:10px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:16px/1.8 "Noto Sans TC",Inter,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}.center{text-align:center}
+section{padding:56px 0}
+.alt{background:#E8ECEC}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--white);padding:8px;z-index:99}
+:focus-visible{outline:3px solid var(--slate);outline-offset:3px}
+h1,h2,h3{font-weight:700;line-height:1.4;color:var(--ink)}
+h1{font-size:32px}h2{font-size:27px}h3{font-size:21px}
+.eyebrow{font:600 15px "Cormorant Garamond",serif;letter-spacing:.18em;color:var(--slate);margin-bottom:12px}
+.lead{font-size:17px;margin:18px 0 28px}
+.sub{color:var(--slate);font-size:18px;margin-top:8px}
+p+p{margin-top:12px}
+.quote{font-size:20px;font-weight:500;color:var(--slate);margin:20px 0;line-height:1.7}
+.head{margin-bottom:36px}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(243,244,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--stone)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:600 24px "Cormorant Garamond",serif;letter-spacing:.12em;text-decoration:none;color:var(--slate)}
+nav a{text-decoration:none;font-size:14.5px;padding:6px 2px;margin-left:24px;border-bottom:2px solid transparent}
+nav a:hover,nav a.active{border-color:var(--slate);color:var(--slate)}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;height:2px;width:22px;background:var(--ink);margin:6px auto}
+.btn{display:inline-block;background:var(--slate);color:var(--white);padding:13px 26px;border-radius:7px;text-decoration:none;font-weight:500;border:1.5px solid var(--slate);cursor:pointer;transition:background .25s,transform .25s}
+.btn:hover{background:var(--ink);border-color:var(--ink);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--slate)}.btn.ghost:hover{background:var(--slate);color:var(--white)}
+.btn.light{background:var(--white);color:var(--slate);border-color:var(--white)}.btn.light:hover{background:var(--bg)}
+.btn.ghost-light{background:transparent;color:var(--white);border-color:var(--white)}.btn.ghost-light:hover{background:rgba(255,255,255,.15)}
+.is-disabled{opacity:.55;cursor:not-allowed}
+.is-disabled:hover{transform:none;background:var(--slate)}
+.btn.ghost.is-disabled:hover{background:transparent;color:var(--slate)}
+footer a.is-disabled:hover{background:none;color:inherit}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.center .actions{justify-content:center}
+.hero{background:linear-gradient(180deg,var(--bg),#E3E9EA);padding-top:40px}
+.grid2{display:grid;gap:36px;align-items:center}
+.photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--mist);max-width:440px;width:100%;margin:0 auto}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.photo.empty{display:grid;place-items:center;background:linear-gradient(160deg,#E3E9EA,var(--mist))}
+.photo.empty::after{content:"D.";font:500 clamp(96px,16vw,160px)/1 "Cormorant Garamond",serif;color:rgba(255,255,255,.75)}
+.photo.empty::before{content:attr(data-label);position:absolute;left:0;right:0;bottom:14px;text-align:center;font-size:12px;color:var(--slate);padding:0 16px;order:2}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(166,184,191,.25)}
+.hero .wrap{position:relative}
+[hidden]{display:none!important}
+.stats{display:grid;gap:12px;margin-top:48px}
+.stats div{background:var(--white);border-radius:var(--r);padding:18px;text-align:center;border:1px solid var(--stone)}
+.stats strong{display:block;font:600 32px "Cormorant Garamond","Noto Sans TC",serif;color:var(--slate)}
+.stats span{font-size:15px}
+.cards3{display:grid;gap:20px}
+.card{background:var(--white);padding:30px 26px;border-radius:var(--r);border:1px solid var(--stone);transition:transform .3s}
+.card:hover{transform:translateY(-4px)}
+.card svg{width:36px;height:36px;fill:none;stroke:var(--slate);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.card h3{margin-bottom:10px}
+.pains{display:grid;gap:14px}
+.pain{font:inherit;text-align:left;background:var(--white);border:1px solid var(--stone);border-radius:var(--r);padding:22px;cursor:pointer;color:var(--ink);transition:transform .3s,border-color .3s,background .3s}
+.pain span{display:block;font:600 15px Inter,sans-serif;color:var(--slate);margin-bottom:6px}
+.pain:hover{transform:translateY(-3px);border-color:var(--mist)}
+.pain[aria-pressed=true]{background:var(--slate);color:var(--white);border-color:var(--slate)}
+.pain[aria-pressed=true] span{color:var(--stone)}
+.closing{text-align:center;font-size:20px;font-weight:700;color:var(--slate);margin-top:40px}
+.course-info{margin-top:36px;padding:28px;background:var(--white);border:1px dashed var(--mist);border-radius:var(--r)}
+.philosophy{padding:72px 0}
+.philosophy p{margin-top:18px}
+.final{background:var(--slate);color:var(--white)}
+.final h2,.final .eyebrow{color:var(--white)}
+footer{background:var(--ink);color:var(--stone);padding:40px 0 24px}
+footer .logo{color:var(--white)}
+.foot{display:grid;gap:24px}
+footer nav a{display:block;margin:0 0 6px;font-size:15px}
+footer a:hover{color:var(--white)}
+.muted{color:var(--mist);font-size:14px}
+.copy{margin-top:28px;font-size:13px;color:var(--mist);border-top:1px solid #4a565c;padding-top:18px}
+
+.num{font:600 15px Inter,sans-serif;color:var(--slate);letter-spacing:.08em}
+.learn,.who{display:grid;gap:18px}
+.lcard{background:var(--white);border:1px solid var(--stone);border-radius:var(--r);padding:28px 26px;transition:transform .3s}
+.lcard:hover{transform:translateY(-3px)}
+.lcard h3{margin:8px 0 10px}
+.lcard.feature{background:#DDE6E9;border:1.5px solid var(--slate)}
+.tag{float:right;font-size:13px;color:var(--white);background:var(--slate);padding:2px 12px;border-radius:99px}
+.strong{font-weight:700;color:var(--slate);font-size:18px}
+.steps{list-style:none;padding:0;position:relative;display:grid;gap:18px}
+.steps::before{content:"";position:absolute;left:27px;top:20px;bottom:20px;width:2px;background:var(--mist)}
+.steps li{position:relative;display:flex;align-items:center;gap:20px;background:var(--white);border:1px solid var(--stone);border-radius:var(--r);padding:18px 22px 18px 16px;font-weight:500}
+.steps .num{flex:none;width:24px;text-align:center;background:var(--white);position:relative;z-index:1}
+.btn.cta{font-weight:600;border-radius:8px;padding:16px 40px;font-size:18px;width:100%;max-width:340px;text-align:center;margin-top:12px}
+.btn.cta.is-pending{cursor:default}
+.btn.cta.is-pending:hover{background:var(--slate);border-color:var(--slate);transform:none}
+.btn.cta:hover{background:#3f525b;border-color:#3f525b}
+.note{font-size:14px;color:var(--slate);margin-top:10px}
+@media(min-width:600px){.who{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:821px){
+ .learn{grid-template-columns:repeat(3,1fr)}.lcard.feature{grid-column:span 2}
+ .who{grid-template-columns:repeat(4,1fr)}
+ .btn.cta{width:auto}
+}
+h1,h2,h3,.quote,.sub,.closing,.lead,.strong{text-wrap:balance}
+p,li,.pain{text-wrap:pretty}
+.center p{text-wrap:balance}
+.nw{white-space:nowrap}
+.seg{display:inline-block;max-width:100%}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);padding:12px 20px 20px;border-bottom:1px solid var(--stone)}
+ nav.open{display:block}nav a{display:block;margin:0;padding:12px 0}
+ .menu-btn{display:block}
+ .flip .photo{order:-1}
+}
+@media(min-width:821px){
+ section{padding:100px 0}.hero{padding-top:72px}
+ h1{font-size:48px}h2{font-size:36px}
+ .grid2{grid-template-columns:1.1fr .9fr;gap:72px}.flip{grid-template-columns:.9fr 1.1fr}
+ .stats,.cards3{grid-template-columns:repeat(3,1fr)}
+ .pains{grid-template-columns:repeat(2,1fr)}
+ .foot{grid-template-columns:1fr auto}
+ body{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *{transition:none!important;animation:none!important}
+ .reveal{opacity:1;transform:none}
+}
